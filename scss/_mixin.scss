@@ -1,0 +1,10 @@
+@mixin content-width{
+    max-width:85%;
+    margin:0 auto;
+}
+
+@mixin btnNav{
+    background-color: #fff;
+    color:#000;
+    width:140px;
+}
