@@ -25,6 +25,30 @@
         justify-content: space-between;
         align-items: center;
 
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 30px;
+            background-color: #fff;
+            z-index: 10;
+            box-shadow: 0px 14px 22px -13px rgba(0, 0, 0, 0.33);
+                -webkit-box-shadow: 0px 14px 22px -13px rgba(0, 0, 0, 0.33);
+                -moz-box-shadow: 0px 14px 22px -13px rgba(0, 0, 0, 0.33);
+                transition:background-color 0.5s ease;
+        }
+
+        &.sticky &--brand {
+            color: #000;
+        }
+
+        &.sticky &--toggle {
+            &-bars {
+                background-color: #000;
+            }
+        }
+
         &--brand {
             color: #fff;
             font-size: 20px;
@@ -198,6 +222,20 @@
                 height: unset;
                 padding: 0 20px;
             }
+
+            &.sticky{
+                padding:25px 60px;
+            }
+
+            &.sticky &--link {
+                color: #000;
+
+                &:hover,
+                &:focus {
+                    background-color: #6E54FA;
+                    color: #fff;
+                }
+            }
         }
 
         &__home {
@@ -226,6 +264,11 @@
     }
 
     @media screen and (min-width:992px) {
+        &__top{
+            &.sticky {
+                      padding: 25px 100px; 
+                }
+        }
         &__home {
             &--firstheading {
                 font-size: 72px;
@@ -803,11 +846,17 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
+     @media screen and (min-width:1200px) {
+        &__form{
+           width:390px;
+        }
+    }
 }
 
 .footer {
     background-color: #6E54FA;
-    padding:30px 0 10px;
+    padding: 30px 0 10px;
 
     &__main {
         @include content-width;
