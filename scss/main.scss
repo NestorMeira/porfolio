@@ -5,14 +5,15 @@
 
 
 .header {
+  
     &__bg {
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
             url(../img/background.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 400px;
+        
+          background-position: center;
+        
+        
     }
 
     &__main {
